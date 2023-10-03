@@ -17,12 +17,12 @@ jobs:
       with:
         dotnet-version: 7.0.x
     -name: Dependencias
-      run: dotnet restore
+      run: dotnet restore ./MinotSoSimpleApp/MiNotSosimpleApp.csproj
     - name: Build
       run: dotnet build --configuration Release
 
     - name: Publish
-      run: dotnet publish --configuration Release --output ./publish
+      run: dotnet publish ./MinotSoSimpleApp/MiNotSosimpleApp.csproj --configuration Release --output ./publish
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
