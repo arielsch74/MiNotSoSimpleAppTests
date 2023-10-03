@@ -17,7 +17,7 @@ jobs:
       with:
         dotnet-version: 7.0.x
     -name: Dependencias
-      run: dotnet restore ./MinotSoSimpleApp/MiNotSosimpleApp.csproj
+      run: dotnet restore ./MiNotSoSimpleApp/MiNotSoSimpleApp.csproj
     - name: Build
       run: dotnet build --configuration Release
 
